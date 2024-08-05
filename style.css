@@ -1,0 +1,364 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: rgb(236, 236, 236);
+  background: -moz-linear-gradient(180deg, rgba(236, 236, 236, 1) 0%, rgba(255, 255, 255, 1) 59%);
+  background: -webkit-linear-gradient(180deg, rgba(236, 236, 236, 1) 0%, rgba(255, 255, 255, 1) 59%);
+  background: linear-gradient(180deg, rgba(236, 236, 236, 1) 0%, rgba(255, 255, 255, 1) 59%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ececec", endColorstr="#ffffff", GradientType=1);
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  opacity: 5%;
+  overflow: hidden;
+  position: fixed;
+}
+
+nav {
+  margin-top: 30px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  gap: 70vw;
+  padding: 20px 0px;
+  z-index: 2;
+  height: 110px;
+  width: 90vw;
+  border-radius: 40px;
+  border: solid 5px #fff;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.906) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.906) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.906) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+}
+
+.web-logo {
+  margin-left: -20px;
+  width: 10%;
+  object-fit: contain;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  gap: 7%;
+}
+
+.scoreboard {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 35px;
+  z-index: 11;
+  width: 95vw;
+  height: 20vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px 25px 0px 0px;
+  border: solid 3px black;
+  bottom: -10px;
+  display: none;
+}
+
+.cyan-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10vw;
+  background: #2ec4b6;
+}
+
+.hand1 {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  width: 10%;
+  padding: 16px;
+  border-radius: 100%;
+  border: solid 1.5vw #fff;
+  background: #2ec4b6;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s;
+  filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+}
+
+.hand1:hover {
+  transform: scale(1.2);
+  z-index: 555555 !important;
+}
+
+.orange-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10vw;
+  background: #ff9f1c;
+}
+
+.hand2 {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 9%;
+  padding: 20px;
+  border-radius: 100%;
+  border: solid 1.5vw #fff;
+  background: #ff9f1c;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s, rotate 0.3s;
+  filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+  cursor: pointer;
+}
+
+.hand2:hover {
+  transform: scale(1.2);
+  z-index: 555555 !important;
+  rotate: 20deg;
+}
+
+.red-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10vw;
+  background: #e71d36;
+}
+
+.hand3 {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  z-index: 0;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  width: 9%;
+  padding: 20px;
+  border-radius: 100%;
+  border: solid 1.5vw #fff;
+  background: #e71d36;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.3s, rotate 0.3s;
+  filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+}
+
+.hand3:hover {
+  transform: scale(1.2);
+  z-index: 555555 !important;
+  rotate: -20deg;
+}
+
+.logo {
+  margin-top: 8px;
+  margin-right: -20px;
+  object-fit: contain;
+}
+
+.arrow {
+  display: flex;
+  position: relative;
+  margin-top: -100%;
+  filter: invert(0);
+  z-index: 10;
+  width: 3vw;
+  opacity: 100;
+}
+
+.score-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 40vw;
+}
+
+.you {
+  display: flex;
+  flex-direction: row;
+  rotate: 90deg;
+  font-size: 50px;
+}
+
+.you h2 {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.354);
+}
+
+.you p {
+  rotate: -90deg;
+  margin-left: 90px;
+  font-weight: 800;
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.737);
+}
+
+.robot {
+  display: flex;
+  flex-direction: row;
+  rotate: 90deg;
+  font-size: 50px;
+}
+
+.robot h2 {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.354);
+  ;
+}
+
+.robot p {
+  rotate: -90deg;
+  margin-left: 90px;
+  font-weight: 800;
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.737);
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+}
+
+.scoreboard div {
+  display: flex;
+  justify-content: center;
+  font-size: 7px;
+  width: 40%;
+  height: 30px;
+  font-weight: 600;
+  border-radius: 13px;
+  border: solid 3px black;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 50px;
+  font-size: 6px;
+}
+
+.footer img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+
+  .background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    object-fit: cover;
+  }
+
+  .score-box {
+    display: flex;
+    width: 40vw;
+    gap: 20vw;
+  }
+
+  .red-card {
+    width: 25%;
+  }
+
+  .cyan-card {
+    width: 25%;
+  }
+
+  .orange-card {
+    width: 25%;
+  }
+
+  .scoreboard {
+    display: flex;
+  }
+
+  .hand1 {
+    display: flex;
+    margin-top: 0px;
+    cursor: pointer;
+    width: 20%;
+    padding: 16px;
+    border-radius: 100%;
+    border: solid 3vw #fff;
+    filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+  }
+
+  .score-box {
+    display: none;
+  }
+
+  .hand2 {
+    display: flex;
+    margin-top: 0px;
+    cursor: pointer;
+    width: 20%;
+    padding: 16px;
+    border-radius: 100%;
+    border: solid 3vw #fff;
+    filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+  }
+
+  .hand3 {
+    display: flex;
+    margin-top: 0px;
+    cursor: pointer;
+    width: 20%;
+    padding: 16px;
+    border-radius: 100%;
+    border: solid 3vw #fff;
+    filter: drop-shadow(0px 00px 10px rgba(0, 0, 0, 0.201));
+  }
+
+  nav {
+    margin-top: 10px;
+    border-radius: 0%;
+    width: 100%;
+    height: 40px;
+    gap: 54vw;
+    align-items: center;
+    border: none;
+    border-top: solid 3px rgb(253, 253, 253);
+    border-bottom: solid 3px rgb(255, 255, 255);
+  }
+
+  .logo {
+    width: 15vw;
+    margin-right: 9%;
+    margin-bottom: 5px;
+  }
+
+  .web-logo {
+    width: 25vw;
+    margin-left: 10%;
+  }
+
+}
