@@ -9,6 +9,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissor</title>
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -25,12 +26,12 @@
 
     <article class="you">
       <h2>VOCÊ</h2>
-      <p>10</p>
+      <span id="youScore">0</span>
     </article>
 
     <article class="robot">
       <h2>ROBÔ</h2>
-      <p>12</p>
+      <span id="robotScore">0</span>
     </article>
 
   </section>
@@ -39,17 +40,21 @@
   <section>
 
     <div class="orange-card">
-      <img class="hand2" id="paper" src="./img/hand2.png" alt="Papel">
+      <img class="hand2" onclick="showPin()" id="paper" src="./img/hand2.png" alt="Papel">
     </div>
 
     <div class="cyan-card">
-      <img class="arrow" src="https://www.svgrepo.com/show/391138/arrow-down-bold.svg" alt="Seta">
-
-      <img class="hand1" id="rock" src="./img/hand1.png" alt="Pedra">
+      
+      <div class="container">
+        <h3>VOCÊ GANHOU!</h3>
+      </div>
+      
+      <img class="hand1" onclick="showPin()" id="rock" src="./img/hand1.png" alt="Pedra">
+      
     </div>
 
     <div class="red-card">
-      <img class="hand3" id="scissor" src="./img/hand3.png" alt="Tesoura">
+      <img class="hand3" onclick="showPin()" id="scissor" src="./img/hand3.png" alt="Tesoura">
     </div>
 
   </section>
@@ -58,10 +63,10 @@
 
       <section class="score">
         <div>
-          <h2>SUA PONTUACAO: 10</h2>
+          <h2>SUA PONTUACAO: <span id="yourScore">0</span></h2>
         </div>
         <div>
-          <h2>PONTUACAO ROBO: 12</h2>
+          <h2>PONTUACAO ROBO: <span id="machineScore">0</span></h2>
         </div>
       </section>
 
@@ -73,6 +78,7 @@
 
   </footer>
 
+<script src="./scripts.js"></script>
 
 
 </body>
